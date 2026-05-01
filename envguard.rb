@@ -5,21 +5,21 @@
 class Envguard < Formula
   desc "Detect exposed secrets and credentials before they reach AI tools"
   homepage "https://github.com/winky/envguard"
-  version "0.2.4"
+  version "0.2.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/winky/envguard/releases/download/v0.2.4/envguard-darwin-amd64.tar.gz"
-      sha256 "b0a4e93541e785701c65c2775a013810d1a80e42f4d4ac6d04e064dfc8ef5de6"
+      url "https://github.com/winky/envguard/releases/download/v0.2.5/envguard-darwin-amd64.tar.gz"
+      sha256 "f2ea0a90ea735e6cd60fcb7bc2d68e79e8bb02e590ca4c0fa0c7181ca9e616bf"
 
       define_method(:install) do
         bin.install "envguard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/winky/envguard/releases/download/v0.2.4/envguard-darwin-arm64.tar.gz"
-      sha256 "7369fab6b05b3854b10aa38aaf956ebc4722d6ceaf3dfe14de00c093f263a8aa"
+      url "https://github.com/winky/envguard/releases/download/v0.2.5/envguard-darwin-arm64.tar.gz"
+      sha256 "ffff2f7a74df500c9d9ba4bb84838e368b3557a19fb57e861cf4936e31551ee2"
 
       define_method(:install) do
         bin.install "envguard"
@@ -29,15 +29,15 @@ class Envguard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winky/envguard/releases/download/v0.2.4/envguard-linux-amd64.tar.gz"
-      sha256 "4a7455e203c41c9869938ae8242ab54ca643cd08622d351abb6ebc02319d83f0"
+      url "https://github.com/winky/envguard/releases/download/v0.2.5/envguard-linux-amd64.tar.gz"
+      sha256 "7478316de0a41f0188130df13abaa529cf63ba14f371a487045388216ea02c32"
       define_method(:install) do
         bin.install "envguard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winky/envguard/releases/download/v0.2.4/envguard-linux-arm64.tar.gz"
-      sha256 "99fcc0ac90d53a5259ab0709ab4de354697aacbc73e45b32308d6b9568c3bb38"
+      url "https://github.com/winky/envguard/releases/download/v0.2.5/envguard-linux-arm64.tar.gz"
+      sha256 "472f78fbd46a33f62862e5a2a6ca6cbf0c7416852bf952bc3b89ad2a891e38e2"
       define_method(:install) do
         bin.install "envguard"
       end
